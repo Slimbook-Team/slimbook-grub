@@ -2,7 +2,7 @@
 Grub theme for SLIMBOOK Laptops
 
 ## To install
-Download and run install.sh
+Download, run the installer and select your laptop model
 
 ```git clone https://github.com/slimbook/slimbook-grub.git```
 
