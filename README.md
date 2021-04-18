@@ -10,5 +10,5 @@ Download and run install.sh
 
 ```sudo bash install.sh```
 
-![screenshot](https://raw.githubusercontent.com/slimbook-grub/slimbookProXGrubTheme/master/screenshots/slimbookProXGrubTheme.png)
+![screenshot](https://raw.githubusercontent.com/slimbook/slimboook-grub/master/screenshots/slimbookProXGrubTheme.png)
 
