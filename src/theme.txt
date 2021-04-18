@@ -1,5 +1,6 @@
-# Slimbook PROX grub theme
-# by Javier Nogales
+# Slimbook grub theme
+# original Javier Nogales
+# improvements Slimbook TEAM
  
 desktop-color: "#000000"
 title-color: "#ffffff"
