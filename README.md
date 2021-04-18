@@ -1,4 +1,4 @@
-# slimbookProXGrubTheme
+# SLIMBOOK Grub Theme
 Grub theme for SLIMBOOK Laptops
 
 ## To install
@@ -10,5 +10,5 @@ Download and run install.sh
 
 ```sudo bash install.sh```
 
-![screenshot](https://raw.githubusercontent.com/javier-nogales/slimbookProXGrubTheme/master/screenshots/slimbookProXGrubTheme.png)
+![screenshot](https://raw.githubusercontent.com/slimbook-grub/slimbookProXGrubTheme/master/screenshots/slimbookProXGrubTheme.png)
 
