@@ -10,5 +10,7 @@ Download, run the installer and select your laptop model
 
 ```sudo bash install.sh```
 
+```select your laptop or generic option```
+
 ![screenshot](https://raw.githubusercontent.com/slimbook/slimboook-grub/master/screenshots/slimbookProXGrubTheme.png)
 
