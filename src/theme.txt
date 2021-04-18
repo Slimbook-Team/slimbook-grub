@@ -1,6 +1,5 @@
 # Slimbook grub theme
-# original Javier Nogales
-# improvements Slimbook TEAM
+# Javier Nogales and Slimbook TEAM
  
 desktop-color: "#000000"
 title-color: "#ffffff"
@@ -15,7 +14,7 @@ terminal-font: "Open Sans Regular 24"
 	top = 108
 }
 + image {
-	file = images/prox.png
+	file = images/logo.png
 	left = 50%-82
 	top = 20
 }
