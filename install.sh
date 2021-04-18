@@ -4,7 +4,7 @@ install_msg="You going to install grub theme. Do you want to CONTINUE? (Y/n)"
 installatin_canceled_msg="Installation canceled"
 grub_path=/boot/grub
 themes_path=$grub_path/themes
-slimbook_prox_theme_path=$themes_path/slimbook_prox
+slimbook_theme_path=$themes_path/slimbook
 grub_cgf_path=/etc/default/grub
 
 # set -x			# activate debugging from here
@@ -13,8 +13,8 @@ grub_cgf_path=/etc/default/grub
 # INFO
 ###############################################################################
 echo "**************************************************"
-echo "* Wellcome to SLIMBOOK PROX grub theme installer *"
-echo "*                             by @_javiernogales *"
+echo "* Wellcome to SLIMBOOK grub theme installer *"
+echo "* SLIMBOOK TEAM @SlimbookEs @_javiernogales *"
 echo "**************************************************"
 echo ""
 
@@ -59,27 +59,27 @@ then
     sudo mkdir $themes_path
 fi
 
-#slimbook_prox theme path
-if [ -d $slimbook_prox_theme_path ]
+#slimbook theme path
+if [ -d $slimbook_theme_path ]
 then
-    echo "remove old slimbook_prox theme folder"
-    sudo rm -R $slimbook_prox_theme_path
+    echo "remove old slimbook theme folder"
+    sudo rm -R $slimbook_theme_path
 fi
-echo "creating slimbook_prox theme folder..."
-sudo mkdir $slimbook_prox_theme_path
+echo "creating slimbook theme folder..."
+sudo mkdir $slimbook_theme_path
 
 echo "loading fonts..."
-sudo cp ./src/fonts/* $slimbook_prox_theme_path
+sudo cp ./src/fonts/* $slimbook_theme_path
 
 echo "loadin OS icons..."
-sudo cp -r ./src/icons $slimbook_prox_theme_path
+sudo cp -r ./src/icons $slimbook_theme_path
 
 echo "loading images..."
-sudo cp -r ./src/images $slimbook_prox_theme_path
-sudo cp -r ./src/pixmap $slimbook_prox_theme_path
+sudo cp -r ./src/images $slimbook_theme_path
+sudo cp -r ./src/pixmap $slimbook_theme_path
 
 echo "copying theme.txt..."
-sudo cp ./src/theme.txt $slimbook_prox_theme_path/theme.txt
+sudo cp ./src/theme.txt $slimbook_theme_path/theme.txt
 
 #grub config
 echo "modifying grub config..."
@@ -107,17 +107,17 @@ if grep -q "^GRUB_THEME" $grub_cgf_path
 then
     # case a: afiable GRUB_THEME uncomented found
     echo "vafiable GRUB_THEME uncomented found!"
-    sed -i -e '/^GRUB_THEME*/c\GRUB_THEME="/boot/grub/themes/slimbook_prox/theme.txt"' $grub_cgf_path
+    sed -i -e '/^GRUB_THEME*/c\GRUB_THEME="/boot/grub/themes/slimbook/theme.txt"' $grub_cgf_path
 else
     if grep -q "^#GRUB_THEME" $grub_cgf_path
     then
         # case b: vafiable GRUB_THEME comented found
         echo "vafiable GRUB_THEME comented found!"
-        sed -i -e '/^#GRUB_THEME*/c\GRUB_THEME="/boot/grub/themes/slimbook_prox/theme.txt"' $grub_cgf_path
+        sed -i -e '/^#GRUB_THEME*/c\GRUB_THEME="/boot/grub/themes/slimbook/theme.txt"' $grub_cgf_path
     else
         # case c: variable GRUB_THEME not found
         echo "writting GRUB_THEME value..."
-        echo 'GRUB_THEME="/boot/grub/themes/slimbook_prox/theme.txt"' | sudo tee -a $grub_cgf_path
+        echo 'GRUB_THEME="/boot/grub/themes/slimbook/theme.txt"' | sudo tee -a $grub_cgf_path
     fi
 fi
 
