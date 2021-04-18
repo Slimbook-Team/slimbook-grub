@@ -2,6 +2,8 @@
 
 install_msg="You going to install grub theme. Do you want to CONTINUE? (Y/n)"
 installatin_canceled_msg="Installation canceled"
+PS3='Please select your laptop: '
+options=("ProX" "Titan" "Essential" "One" "Kymera" "Other")
 grub_path=/boot/grub
 themes_path=$grub_path/themes
 slimbook_theme_path=$themes_path/slimbook
@@ -65,6 +67,19 @@ then
     echo "remove old slimbook theme folder"
     sudo rm -R $slimbook_theme_path
 fi
+
+#diferent logo each laptop model
+select opt in "${options[@]}"
+do
+    model="src/images/"$(echo $opt | tr '[:upper:]' '[:lower:]')".png"
+    if [ -f $model ]
+    then
+       cp $model src/images/logo.png
+    fi 
+    break
+done
+
+
 echo "creating slimbook theme folder..."
 sudo mkdir $slimbook_theme_path
 
