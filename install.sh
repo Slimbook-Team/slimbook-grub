@@ -38,7 +38,7 @@ do
     count=$((count+1))
 done
 
-if [ $CONTINUE != 'Y' ] || [ $CONTINUE = 'y' ]
+if [ $CONTINUE != 'Y' ] || [ $CONTINUE != 'y' ]
 then
     echo $installatin_canceled_msg
     exit 0
