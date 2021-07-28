@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install_msg="You going to install grub theme. Do you want to CONTINUE? (Y/n)"
-installatin_canceled_msg="Installation canceled"
+installation_canceled_msg="Installation canceled"
 PS3='Please select your laptop: '
 options=("ProX" "Titan" "Essential" "One" "Zero" "Kymera" "Executive" "Other")
 grub_path=/boot/grub
@@ -26,7 +26,6 @@ echo ""
 count=0
 while [ $count -lt 3 ]
 do 
-    # echo "count = $count"
     echo $install_msg
     read CONTINUE
     if [ -z $CONTINUE ]
@@ -42,7 +41,7 @@ done
 
 if [ $CONTINUE != 'Y' ] && [ $CONTINUE != 'y' ]
 then
-    echo $installatin_canceled_msg
+    echo $installation_canceled_msg
     exit 0
 fi
 
@@ -53,14 +52,14 @@ do
     if [ -f $model ]
     then
        cp $model src/images/logo.png
-    fi 
+    fi
     break
 done
 
 #grub path
 if [ ! -d $grub_path ]
 then
-    echo $installatin_canceled_msg
+    echo $installation_canceled_msg
     echo "grub is not installed"
     exit 1
 fi
@@ -86,7 +85,7 @@ sudo mkdir $slimbook_theme_path
 echo "loading fonts..."
 sudo cp ./src/fonts/* $slimbook_theme_path
 
-echo "loadin OS icons..."
+echo "loading OS icons..."
 sudo cp -r ./src/icons $slimbook_theme_path
 
 echo "loading images..."
@@ -102,14 +101,14 @@ echo "modifying grub config..."
 
 if grep -q "^GRUB_GFXMODE" $grub_cgf_path
 then
-    # case a: afiable GRUB_GFXMODE uncomented found
-    echo "vafiable GRUB_GFXMODE uncomented found."
+    # case a: variable GRUB_GFXMODE uncommented found
+    echo "variable GRUB_GFXMODE uncommented found."
     sed -i -e '/^GRUB_GFXMODE*/c\GRUB_GFXMODE=1920x1080x32' $grub_cgf_path
 else
     if grep -q "^#GRUB_GFXMODE" $grub_cgf_path
     then
-        # case b: vafiable GRUB_GFXMODE comented found
-        echo "vafiable GRUB_GFXMODE comented found."
+        # case b: variable GRUB_GFXMODE commented found
+        echo "variable GRUB_GFXMODE commented found."
         sed -i -e '/^#GRUB_GFXMODE*/c\GRUB_GFXMODE=1920x1080x32' $grub_cgf_path
     else
         # case c: variable GRUB_GFXMODE not found
@@ -120,14 +119,14 @@ fi
 
 if grep -q "^GRUB_THEME" $grub_cgf_path
 then
-    # case a: afiable GRUB_THEME uncomented found
-    echo "vafiable GRUB_THEME uncomented found!"
+    # case a: variable GRUB_THEME uncommented found
+    echo "variable GRUB_THEME uncommented found!"
     sed -i -e '/^GRUB_THEME*/c\GRUB_THEME="/boot/grub/themes/slimbook/theme.txt"' $grub_cgf_path
 else
     if grep -q "^#GRUB_THEME" $grub_cgf_path
     then
-        # case b: vafiable GRUB_THEME comented found
-        echo "vafiable GRUB_THEME comented found!"
+        # case b: variable GRUB_THEME commented found
+        echo "vafiable GRUB_THEME commented found!"
         sed -i -e '/^#GRUB_THEME*/c\GRUB_THEME="/boot/grub/themes/slimbook/theme.txt"' $grub_cgf_path
     else
         # case c: variable GRUB_THEME not found
