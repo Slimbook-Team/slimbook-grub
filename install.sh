@@ -3,7 +3,7 @@
 install_msg="You going to install grub theme. Do you want to CONTINUE? (Y/n)"
 installation_canceled_msg="Installation canceled"
 PS3='Please select your laptop: '
-options=("ProX" "Titan" "Essential" "One" "Zero" "Kymera" "Executive" "Other")
+options=("ProX" "Titan" "Hero" "Hero-S" "Executive" "Essential" "Elemental" "One" "Zero" "Kymera" "Other")
 grub_path=/boot/grub
 themes_path=$grub_path/themes
 slimbook_theme_path=$themes_path/slimbook
