@@ -1,0 +1,14 @@
+Source: slimbook-grub
+Section: libs
+Priority: optional
+Maintainer: Slimbook <dev@slimbook.es>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.7
+Homepage: https://github.com/Slimbook-Team/slimbook-grub
+
+Package: slimbook-grub-theme
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Slimbook Grub theme
+ Grub theme with Slimbook logo
+

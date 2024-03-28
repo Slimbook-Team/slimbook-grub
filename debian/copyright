@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: slimbook-grub
+Source: https://github.com/Slimbook-Team/slimbook-grub
+
+Files: *
+Copyright: 2023 Slimbook <dev@slimbook.es>
+License: GPL-3+
+ 
