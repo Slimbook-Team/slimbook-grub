@@ -1,0 +1,5 @@
+slimbook-grub (24.0.0) noble; urgency=medium
+
+  * Initial release.
+
+ -- Slimbook <dev@slimbook.es>  Sat, 30 Mar 2024 15:05:01 +0100
