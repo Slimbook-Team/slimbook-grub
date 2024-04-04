@@ -1,5 +1,4 @@
-src/fonts /boot/grub/themes/slimbook
-src/icons /boot/grub/themes/slimbook
-src/pixmap /boot/grub/themes/slimbook
-src/images/* /boot/grub/themes/slimbook/images/models
+src/* /boot/grub/themes/slimbook
+90_slimbook /etc/grub.d/
+slimbook.cfg /etc/default/grub.d/
 
