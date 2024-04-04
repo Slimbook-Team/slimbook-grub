@@ -5,51 +5,53 @@ desktop-color: "#000000"
 title-color: "#ffffff"
 title-text: ""
 terminal-font: "Open Sans Regular 24"
+
 #terminal-width: "100%"
 #terminal-height: "100%"
 #terminal-border: "0"
+
 + image {
-	file = images/slimbook.png
-	left = 50%-322
-	top = 108
+    file = images/slimbook.png
+    left = 50%-322
+    top = 108
 }
+
 + image {
-	file = images/logo.png
-	left = 50%-82
-	top = 20
+    file = images/logo.png
+    left = 50%-82
+    top = 20
 }
+
 + label {
-	id = "__timeout__"
-	text = "Booting in %d seconds"
-	top = 180
-	left = 0
-	width = 100%
-	align = "center"
-	font = "Open Sans Regular 16"
-	color = "#ddd"
-	
+    id = "__timeout__"
+    text = "Booting in %d seconds"
+    top = 180
+    left = 0
+    width = 100%
+    align = "center"
+    font = "Open Sans Regular 16"
+    color = "#ddd"
 }
+
 + boot_menu {
-          
-	item_font = "Open Sans Regular 24"
-	# item_color = "#ffffff"
-        # selected_item_color = "#ffff7f"
 
+    item_font = "Open Sans Regular 24"
+    # item_color = "#ffffff"
+    # selected_item_color = "#ffff7f"
 
-	left = 20%
-    	top = 30%
-	width = 60%
-	height = 70%
-	
-	icon_width = 80
-	icon_height = 80
-	item_icon_space = 50
-	item_height = 90
-	item_spacing = 24
-	item_color = "#ddd"
-	item_pixmap_style = "pixmap/item_*.png"
-	selected_item_color = "#fff"
-	selected_item_pixmap_style = "pixmap/selected_*.png"
+    left = 20%
+    top = 30%
+    width = 60%
+    height = 70%
 
+    icon_width = 80
+    icon_height = 80
+    item_icon_space = 50
+    item_height = 90
+    item_spacing = 24
+    item_color = "#ddd"
+    item_pixmap_style = "pixmap/item_*.png"
+    selected_item_color = "#fff"
+    selected_item_pixmap_style = "pixmap/selected_*.png"
 }
 
