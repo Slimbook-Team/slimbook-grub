@@ -1,3 +1,9 @@
+slimbook-grub (24.1.0) noble; urgency=medium
+
+  * restored original ubuntu logo
+
+ -- Slimbook <dev@slimbook.es>  Tue, 30 Apr 2024 00:09:35 +0200
+
 slimbook-grub (24.0.0) noble; urgency=medium
 
   * Initial release.
