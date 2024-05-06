@@ -41,7 +41,11 @@ case $family in
     "40")
         file="excalibur"
     ;;
-    
+
+    "80")
+        file="hero-s"
+    ;;
+
     *)
         file="slimbook"
     ;;
