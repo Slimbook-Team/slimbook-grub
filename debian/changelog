@@ -1,3 +1,9 @@
+slimbook-grub (24.2) noble; urgency=medium
+
+  * Updated icons and model detection
+
+ -- Slimbook <dev@slimbook.es>  Thu, 17 Oct 2024 11:08:31 +0200
+
 slimbook-grub (24.1.2) noble; urgency=medium
 
   * Updated slimbook icon
