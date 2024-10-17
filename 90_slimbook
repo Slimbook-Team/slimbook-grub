@@ -2,54 +2,10 @@
 
 set -e
 
-model_str=`slimbookctl info | grep model | cut -d ":" -f 2`
+family=`slimbookctl info | grep family | cut -d ":" -f 2`
 
-family=`echo $model_str | sed -e 's/0x\(.*\)../\1/'`
-model=`echo $model_str | sed -e 's/0x.*\(..\)/\1/'`
-vendor=`slimbookctl info | grep vendor | cut -d ":" -f 2`
+if [ $family == "unknown" ]; then
+    family="others"
+fi
 
-case $family in
-
-    "0")
-        file="slimbook"
-    ;;
-    
-    "1")
-        file="executive"
-    ;;
-    
-    "2")
-        file="prox"
-    ;;
-    
-    "4")
-        file="titan"
-    ;;
-    
-    "8")
-        file="hero"
-    ;;
-    
-    "10")
-        file="essential"
-    ;;
-    
-    "20")
-        file="elemental"
-    ;;
-    
-    "40")
-        file="excalibur"
-    ;;
-
-    "80")
-        file="hero-s"
-    ;;
-
-    *)
-        file="slimbook"
-    ;;
-    
-esac
-
-ln -sf "/boot/grub/themes/slimbook/images/$file.png" "/boot/grub/themes/slimbook/images/logo.png" 
+ln -sf "/boot/grub/themes/slimbook/images/$family.png" "/boot/grub/themes/slimbook/images/logo.png" 
