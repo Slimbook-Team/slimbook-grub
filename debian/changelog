@@ -1,3 +1,10 @@
+slimbook-grub (24.2.2) noble; urgency=medium
+
+  * Fixed (again) typo in script
+  * Fixed not showing proper slimbook icon
+
+ -- Slimbook <dev@slimbook.es>  Tue, 29 Oct 2024 16:12:30 +0100
+
 slimbook-grub (24.2.1) noble; urgency=medium
 
   * Fix typo on script
