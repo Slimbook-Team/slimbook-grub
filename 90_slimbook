@@ -4,7 +4,7 @@ set -e
 
 family=`slimbookctl info | grep family | cut -d ":" -f 2`
 
-if [ $family == "unknown" ]; then
+if [ $family=="unknown" ]; then
     family="others"
 fi
 
